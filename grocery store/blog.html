@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Basket - Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Pink Basket</h3>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon-container">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+            <div class="cart-dropdown">
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">₵0.00</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <button class="cart-button view-cart">View Cart</button>
+                        <button class="cart-button checkout">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Home</a> &gt; <span>Blog</span>
+    </div>
+
+    <main class="blog-page">
+        <div class="blog-header">
+            <h1>Pink Basket Blog</h1>
+            <p>Discover the latest tips, recipes, and news about healthy eating and grocery shopping</p>
+        </div>
+        
+       
+
+        <div class="blog-posts">
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Healthy Eating">
+                    <span class="post-category">Healthy Eating</span>
+                </div>
+                <div class="post-content">
+                    <h2>Tips for Healthy Eating</h2>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                        <span><i class="far fa-user"></i> By Sarah Johnson</span>
+                        <span><i class="far fa-comment"></i> 24 Comments</span>
+                    </div>
+                    <p> Learn about portion control, meal planning, and smart food choices</p>
+                    
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Meal Prep">
+                    <span class="post-category">Recipes</span>
+                </div>
+                <div class="post-content">
+                    <h2>Easy Meal Prep Ideas for Busy Weekdays</h2>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> June 4, 2025</span>
+                        <span><i class="far fa-user"></i> Mr Logan</span>
+                        <span><i class="far fa-comment"></i> 18 Comments</span>
+                    </div>
+                    <p>Cook rice,fry eggs,add onions,mix with rice, season,stir, and serve. </p>
+                    
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shopping Tips">
+                    <span class="post-category">Shopping Tips</span>
+                </div>
+                <div class="post-content">
+                    <h2>Smart Grocery Shopping on a Budget</h2>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> June 4, 2025</span>
+                        <span><i class="far fa-user"></i> By Mr Logan</span>
+                        <span><i class="far fa-comment"></i> 32 Comments</span>
+                    </div>
+                    <p>1.Make a shopping list. <br>
+                    2.Buy what you will use in the next week.<br>
+                3. Choose versatile foods.<br>
+            4.Avoid impulse buying. </p>
+                    
+                </div>
+            </article>
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Pink Basket is your trusted online grocery store, delivering fresh and quality products right to your doorstep.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="product.html">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Grocery Street, Foodville</p>
+                <p><i class="fas fa-phone"></i>(233) 059-3286-743</p>
+                <p><i class="fas fa-envelope"></i> info@pinkbasket.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Pink Basket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

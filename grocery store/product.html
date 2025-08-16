@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Basket-Online Grocery Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Pink Basket</h3>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon-container">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+            <div class="cart-dropdown">
+                <div class="cart-items">
+                    
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">₵0.00</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <button class="cart-button view-cart">View Cart</button>
+                        <button class="cart-button checkout">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Home</a> &gt; <span>Products</span>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="product-search" placeholder="Search for products...">
+        <button id="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    
+    <h1 class="category-title">Fresh Produce</h1>
+    
+    <div class="products-container">
+         <!-- Product 1 -->
+        <div class="product-card" data-id="apples">
+            <img src="download (5).jpg" alt="Fresh Apples" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Apples</div>
+                <div class="product-price">₵10.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-id="bread">
+            <img src="Best Breads for Diabetes.jpg" alt="Whole Grain Bread" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Whole Grain Bread</div>
+                <div class="product-price">₵45.49</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card" data-id="bananas">
+            <img src="Ocado Small Fairtrade Bananas _ Ocado.jpg" alt="Bananas" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Bananas</div>
+                <div class="product-price">₵20.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card" data-id="tomatoes">
+            <img src="download (6) - Copy.jpg" alt="Tomatoes" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Tomatoes</div>
+                <div class="product-price">₵30.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card" data-id="oranges">
+            <img src="download (8).jpg" alt="Oranges" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Oranges</div>
+                <div class="product-price">₵10.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card" data-id="potatoes">
+            <img src="download (9).jpg" alt="Potatoes" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Potatoes</div>
+                <div class="product-price">₵24.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="category-title">Grains & Staples</h1>
+    
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product-card" data-id="spaghetti">
+            <img src="WhatsApp Image 2025-06-02 at 18.24.44_08e3b04d.jpg" alt="Spagheti" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Spagheti</div>
+                <div class="product-price">₵12.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-id="maize">
+            <img src="WhatsApp Image 2025-06-02 at 18.24.41_61745a6f.jpg" alt="Maize" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Maize</div>
+                <div class="product-price">₵34.49</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card" data-id="cassava-flour">
+            <img src="WhatsApp Image 2025-06-02 at 18.24.44_afb382be.jpg" alt="Flour" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Cassava Flour</div>
+                <div class="product-price">₵40.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card" data-id="gari">
+            <img src="WhatsApp Image 2025-06-02 at 18.24.43_7a5be8e8.jpg" alt="Gari" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Gari</div>
+                <div class="product-price">₵20.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card" data-id="wheat-flour">
+            <img src="WhatsApp Image 2025-06-02 at 18.24.42_8638f7c2.jpg" alt="Flour" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Wheat Flour</div>
+                <div class="product-price">₵24.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card" data-id="rice">
+            <img src="Cindy Rice 25 KG _ Buy Online At The Best Price In Ghana.jpg" alt="Rice" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Rice</div>
+                <div class="product-price">₵200.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="category-title">Canned and Packaged</h1>
+    
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product-card" data-id="tomato-paste">
+            <img src="WhatsApp Image 2025-06-02 at 18.24.45_e6732c0d.jpg" alt="Tomato Paste" class="product-image">
+            <div class="product-info">
+                 <div class="product-name"> Tomato Paste</div>
+                <div class="product-price">₵34.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-id="powdered-milk">
+            <img src="download (4).jpg" alt="Powdered Milk" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Powdered Milk</div>
+                <div class="product-price">₵79.49</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card" data-id="sardine">
+            <img src="Titus Sardines - Pack of 6.jpg" alt="Sardine" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Sardine</div>
+                <div class="product-price">₵45.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card" data-id="tuna">
+            <img src="Century Tuna Hot and Spicy, 4_9 Ounce (Pack of 12).jpg" alt="Tuna" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Tuna</div>
+                <div class="product-price">₵30.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card" data-id="magi">
+            <img src="Maggi chicken stock Halal 24 pcs full pack from Jordan ماجي مرقة دجاج حلال _ eBay.jpg" alt="Magi" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Magi</div>
+                <div class="product-price">₵35.99/Box</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card" data-id="evaporated-milk">
+            <img src="Carnation Evaporated Milk 170g (Pack of 12).jpg" alt="Evaporated Milk" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Evaporated Milk</div>
+                <div class="product-price">₵25.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="category-title">Beverages</h1>
+    
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product-card" data-id="don-julio">
+            <img src="Don Julio Reposado Mexican Tequila.jpg" alt="Don Julio" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Don Julio</div>
+                <div class="product-price">₵2,000.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-id="coca-cola">
+            <img src="Drinking Coke and Pepsi leads to larger testicles, more testosterone_ study.jpg" alt="Coca Cola" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Coca Cola</div>
+                <div class="product-price">₵20.49</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card" data-id="water">
+            <img src="DhaAvant Mineral Still Water 12x200ml MAS.jpg" alt="Water" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Bottle Water</div>
+                <div class="product-price">₵30.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card" data-id="don-simon">
+            <img src="Don Simon Saft Apfel Tetra Brik 200 ml (6 Stk_).jpg" alt="Don Simon" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Don Simon</div>
+                <div class="product-price">₵35.00</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card" data-id="energy-drink">
+            <img src="💙🖤🤍.jpg" alt="Energy Drink" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Energy Drink</div>
+                <div class="product-price">₵45.00</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card" data-id="milo">
+            <img src="download (10).jpg" alt="Milo Drink" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Milo Drink</div>
+                <div class="product-price">₵34.00</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="category-title">Protien & Frozen Items</h1>
+    
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product-card" data-id="baked-beans">
+            <img src="download (11).jpg" alt="Baked Beans" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Baked Beans</div>
+                <div class="product-price">₵32.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-id="tuna-fish">
+            <img src="Tray w_ Fish Mockup.jpg" alt="Fish" class="product-image">
+            <div class="product-info">
+                <div class="product-name"> Tuna Fish</div>
+                <div class="product-price">₵35.49</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card" data-id="cow-meat">
+            <img src="Beef _ Target.jpg" alt="Cow Meat" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Cow Meat</div>
+                <div class="product-price">₵40.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card" data-id="sausage">
+            <img src="14 Premium Sausage Links Mild 12oz.jpg" alt="Sausage" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Sausage</div>
+                <div class="product-price">₵32.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card" data-id="gizzard">
+            <img src="Perdue Fresh Chicken Gizzards.jpg" alt="Gizzard" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Gizzard</div>
+                <div class="product-price">₵38.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card" data-id="full-chicken">
+            <img src="Tray With Raw Chicken Mockup - Top View.jpg" alt="Full Chicken" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Full Chicken</div>
+                <div class="product-price">₵150.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="category-title">Toiletries & Personal Care</h1>
+    
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product-card" data-id="geisha">
+            <img src="https___punpple_com_shop_geisha-african-strength-traditional-black-soap-225g-2_  Geisha African Strength Traditional Black Soap 225g _2.jpg" alt="Geisha" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Geisha</div>
+                <div class="product-price">₵15.00</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-id="pepsodent">
+            <img src="Pepsodent Charcoal Relaunched with Additional Benefits.jpg" alt="Pepsodent"class="product-image">
+            <div class="product-info">
+                <div class="product-name"> Pepsodent</div>
+                <div class="product-price">₵35.49</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card" data-id="johnson-jelly">
+            <img src="Baby Jelly Lightly Fragranced 250ML.jpg" alt="Johnson Jelly" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Johnson Jelly</div>
+                <div class="product-price">₵60.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card" data-id="nivea-rollon">
+            <img src="NIVEA Men Deep Antiperspirant Roll-On Review.jpg" alt="Roll-on" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Nivea Roll-on Men</div>
+                <div class="product-price">₵45.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card" data-id="lip-balm">
+            <img src="Nivea Watermelon Shine Caring Lip Balm 4_8g.jpg" alt="Lip balm" class="product-image">
+            <div class="product-info">
+                <div class="product-name">lip Balm</div>
+                <div class="product-price">₵35.99</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card" data-id="toilet-paper">
+            <img src="Cottonelle Ultra Comfort Toilet Paper with Cushiony CleaningRipples Texture, Strong Bath Tissue, 24 Family Mega Rolls (24 Family Mega Rolls = 108 Regular Rolls) (4 Packs of 6), 296 Sheets per Roll.jpg" alt="Toilet Paper" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Toilet Paper</div>
+                <div class="product-price">₵75.00</div>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Pink Basket is your trusted online grocery store, delivering fresh and quality products right to your doorstep.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="product.html">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Grocery Street, Foodville</p>
+                <p><i class="fas fa-phone"></i> (233) 059-3286-743</p>
+                <p><i class="fas fa-envelope"></i> info@pinkbasket.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Pink Basket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

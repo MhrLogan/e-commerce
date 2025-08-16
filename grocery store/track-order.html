@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Basket - Track Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Pink Basket</h3>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon-container">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+            <div class="cart-dropdown">
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">₵0.00</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <button class="cart-button view-cart">View Cart</button>
+                        <button class="cart-button checkout">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Home</a> &gt; <span>Track Order</span>
+    </div>
+
+    <main class="track-order-page">
+        <div class="track-order-container">
+            <h1>Track Your Order</h1>
+            <p class="track-order-description">Enter your order number to track your delivery status</p>
+
+            <div class="track-order-form">
+                <div class="form-group">
+                    <label for="order-number">Order Number</label>
+                    <input type="text" id="order-number" placeholder="Enter your order number" required>
+                </div>
+                <button class="track-button" id="track-button">Track Order</button>
+            </div>
+
+            <div class="order-status-container" id="order-status" style="display: none;">
+                <div class="order-info">
+                    <div class="info-group">
+                        <span class="info-label">Order Number:</span>
+                        <span class="info-value" id="display-order-number"></span>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Order Date:</span>
+                        <span class="info-value" id="display-order-date"></span>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Estimated Delivery:</span>
+                        <span class="info-value" id="estimated-delivery"></span>
+                    </div>
+                </div>
+
+                <div class="tracking-progress">
+                    <div class="progress-steps">
+                        <div class="step completed" id="step-ordered">
+                            <div class="step-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="step-label">Order Placed</div>
+                        </div>
+                        <div class="step" id="step-confirmed">
+                            <div class="step-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="step-label">Order Confirmed</div>
+                        </div>
+                        <div class="step" id="step-processing">
+                            <div class="step-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="step-label">Processing</div>
+                        </div>
+                        <div class="step" id="step-shipped">
+                            <div class="step-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="step-label">Shipped</div>
+                        </div>
+                        <div class="step" id="step-delivered">
+                            <div class="step-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="step-label">Delivered</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="order-details">
+                    <h2>Order Details</h2>
+                    <div class="items-list" id="track-order-items">
+                        <!-- Order items will be dynamically added here -->
+                    </div>
+                </div>
+
+                <div class="delivery-info">
+                    <h2>Delivery Information</h2>
+                    <div id="delivery-details">
+                        <!-- Delivery details will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-order-found" id="no-order-found" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h2>Order Not Found</h2>
+                <p>We couldn't find an order with that number. Please check your order number and try again.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Pink Basket is your trusted online grocery store, delivering fresh and quality products right to your doorstep.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="product.html">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Grocery Street, Foodville</p>
+                <p><i class="fas fa-phone"></i> (233) 059-3286-743</p>
+                <p><i class="fas fa-envelope"></i> info@pinkbasket.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 🛒 Pink Basket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Basket - Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Pink Basket</h3>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon-container">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+            <div class="cart-dropdown">
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">₵0.00</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <button class="cart-button view-cart">View Cart</button>
+                        <button class="cart-button checkout">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="index.html">Home</a> &gt; <a href="cart.html">Your Cart</a> &gt; <span>Checkout</span>
+    </div>
+
+    <main class="checkout-page">
+        <h1>Checkout</h1>
+
+        <div class="checkout-container">
+            <div class="shipping-details">
+                <h2>Shipping Information</h2>
+                <form id="shipping-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Zip Code</label>
+                        <input type="text" id="zip" name="zip" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                         <input type="text" id="country" name="country" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </form>
+            </div>
+
+            <div class="payment-section">
+                <h2>Payment Method</h2>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <input type="radio" id="momo" name="payment-method" value="momo" required>
+                        <label for="momo">
+                            <img src="download (12).jpg" alt="MTN Mobile Money">
+                            <span>MTN Mobile Money</span>
+                        </label>
+                        <div class="payment-details momo-details">
+                            <input type="tel" placeholder="Enter MTN Mobile Money Number" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <input type="radio" id="vodafone" name="payment-method" value="vodafone">
+                        <label for="vodafone">
+                            <img src="How to Reverse Mobile Money Transfer on Telecel Cash.jpg" alt="Vodafone Cash">
+                            <span>Vodafone Cash</span>
+                        </label>
+                        <div class="payment-details vodafone-details">
+                            <input type="tel" placeholder="Enter Vodafone Cash Number" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <input type="radio" id="airteltigo" name="payment-method" value="airteltigo">
+                        <label for="airteltigo">
+                            <img src="Xorlali_com.jpg" alt="AirtelTigo Money">
+                            <span>AirtelTigo Money</span>
+                        </label>
+                        <div class="payment-details airteltigo-details">
+                            <input type="tel" placeholder="Enter AirtelTigo Money Number" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <input type="radio" id="card" name="payment-method" value="card">
+                        <label for="card">
+                            <img src="Credit Vectors & Illustrations for Free Download _ Freepik.jpg" alt="Credit/Debit Card">
+                            <span>Credit/Debit Card</span>
+                        </label>
+                        <div class="payment-details card-details">
+                            <div class="card-input-group">
+                                <input type="text" placeholder="Card Number" pattern="[0-9]{16}" required>
+                                <div class="card-details-row">
+                                    <input type="text" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/([0-9]{2})" required>
+                                    <input type="text" placeholder="CVV" pattern="[0-9]{3,4}" required>
+                                </div>
+                                <input type="text" placeholder="Cardholder Name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-method"> 
+                        <input type="radio" id="cod" name="payment-method" value="cod">
+                        <label for="cod">
+                            <img src="Counting cash money, Cash in hand, income concept.jpg" alt="Cash on Delivery">
+                            <span>Cash on Delivery</span>
+                        </label>
+                        <div class="payment-details cod-details">
+                            <p>Pay with cash upon delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary-checkout">
+                <h2>Order Summary</h2>
+                <div class="checkout-items-list">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Items in Cart:</span>
+                        <span class="checkout-items-count">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span class="checkout-subtotal">₵0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span class="checkout-shipping">₵0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span class="checkout-grandtotal">₵0.00</span>
+                    </div>
+                </div>
+                <button class="place-order-btn">Place Order</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Pink Basket is your trusted online grocery store, delivering fresh and quality products right to your doorstep.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="product.html">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Grocery Street, Foodville</p>
+                <p><i class="fas fa-phone"></i> (233) 059-3286-743</p>
+                <p><i class="fas fa-envelope"></i> info@pinkbasket.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 🛒 Pink Basket. All rights reserved.</p>
+        </div>
+    </footer>
+
+     <script src="script.js"></script>
+</body>
+</html> 
